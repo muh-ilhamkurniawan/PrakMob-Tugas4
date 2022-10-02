@@ -3,6 +3,7 @@ package id.ac.polinema.intentexercise;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -37,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void handlHome (View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://muh-ilhamkurniawan.github.io/portofolio/"));
+        startActivity(browserIntent);
     }
 }
